@@ -7,7 +7,7 @@
 # finally:# Выполнение кода в любом случае  Необязательно
 #     print('Looser2')
 # print('Looser')
-user_id='38405230460'
+user_id='48203240070'
 while True:
     try:
         #user_id=input('ВВеди ид код ')
@@ -85,6 +85,7 @@ lst3=('Больница Курессааре','Наистеклиник Тарт
       'Южно-эстонская больница (Выру), Пылвская больница')
 #print(len(lst1),len(lst2),len(lst3))
 #Проверка есть не верно составлен список
+my_bolnica_name=""
 if len(lst1)!=len(lst2) or len(lst2)!=len(lst3):
     print('Списки разные длинны')
     quit()
@@ -115,13 +116,13 @@ if sum1-(sum1//11)*11 == int(user_id[-1]):
 if sum1 - (sum1 // 11) * 11 == 10 and int(user_id[-1]) == 0:
           print('Все ок')
 #проверка 2 ключ
-else:
-    if sum2 - (sum2 // 11) * 11 == int(user_id[-1]):
-        print('Все ок ключ2')
-
-    if sum2 - (sum2 // 11) * 11 == 10 and int(user_id[-1]) == 0:
-        print('Все ок ключ2')
-    print('Не прошло ключевание ни 1 ни 2, проверьте 11 знак')
-    quit()
+# else:
+#     if sum2 - (sum2 // 11) * 11 == int(user_id[-1]):
+#         print('Все ок ключ2')
+#
+#     if sum2 - (sum2 // 11) * 11 == 10 and int(user_id[-1]) == 0:
+#         print('Все ок ключ2')
+#     print('Не прошло ключевание ни 1 ни 2, проверьте 11 знак')
+#     quit()
 print('You are ',My_pol,'. You birh day is ',my_date,'.',my_month,'.',my_year,".You hospidal is ",
       my_bolnica_name,'. You code is correct',sep='')
