@@ -69,3 +69,4 @@ print(My_funct2.triple(4))
 
 from My_funct2 import double   #вызов одной функции
 print(double(5))
+
