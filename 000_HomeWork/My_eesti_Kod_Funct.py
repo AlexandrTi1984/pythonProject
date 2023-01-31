@@ -67,7 +67,7 @@ def bolnica_name (my_era, my_y, my_value):
      if int(my_value)>lst1[i] and int(my_value)<lst2[i]:
          return lst3[i]
 
-def chek_key_1_2 (control_number):
+def chek_key_1_2 (number,control_number):
     lst4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
     lst5 = [3, 4, 5, 6, 7, 8, 9, 1, 2, 3]
     sum1 = 0
@@ -75,10 +75,12 @@ def chek_key_1_2 (control_number):
     key1= False
     key2 = False
     for i in range(10):
-        sum1 = sum1 + lst4[i] * int(control_number)
-        sum2 = sum2 + lst5[i] * int(control_number)
+        sum1 = sum1 + lst4[i] * int(number[i])
+        sum2 = sum2 + lst5[i] * int(number[i])
+     #   print(str(lst4[i]), " ", str(number[i]), sum1)
     # Если 10 то проверяем на 0.
     # Проверка на ключ
+    #print(sum1)
     if sum1 - (sum1 // 11) * 11 == int(control_number):
         key1=True
     if sum1 - (sum1 // 11) * 11 == 10 and int(control_number) == 0:

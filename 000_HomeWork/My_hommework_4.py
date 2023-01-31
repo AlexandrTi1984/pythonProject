@@ -7,7 +7,7 @@
 # finally:# Выполнение кода в любом случае  Необязательно
 #     print('Looser2')
 # print('Looser')
-user_id='48203240070'
+user_id='38803160272'
 
 while True:
     #user_id = input('ВВеди ид код или напиши exit для выхода или 0000 ')
@@ -111,7 +111,7 @@ sum2=0
 for i in range(10):
     sum1 =sum1 + lst4[i]*int(user_id[i])
     sum2=sum2+ lst5[i]*int(user_id[i])
- #   print(str(lst4[i]), " ", str(user_id[i]),sum1)
+    print(str(lst4[i]), " ", str(user_id[i]),sum1)
 print(sum1)
 
 #Если 10 то проверяем на 0.
