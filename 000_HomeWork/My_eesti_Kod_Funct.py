@@ -1,6 +1,6 @@
 def gender_pol (pol_gender):
     # Проверка пола первой цифры
-    if int(pol_gender) == 0 or int(pol_gender) >= 9:
+    if int(pol_gender) == 0 or int(pol_gender) == 9:
         print("Не верный код, ошибка в 1 символе")
         quit()
 
@@ -11,6 +11,7 @@ def gender_pol (pol_gender):
     return  My_pol
 
 def my_date_birthday (my_d, my_m, my_era,my_y): # передача день, месяц, год
+    my_date_send=''
     # Проверка даты на 31
     if int(my_d) > 31:
         print("Не верный код, ошибка в 6-7 символе")
@@ -30,7 +31,23 @@ def my_date_birthday (my_d, my_m, my_era,my_y): # передача день, м�
         my_date_send=my_d +'.'+ my_m + '.'+'21'+str(my_y)
     return my_date_send
 
-def bolnica_name (my_value):
+def bolnica_name (my_era, my_y, my_value):
+    my_date_send = ''
+
+    if int(my_era) == 1 or int(my_era) == 2:
+        my_date_send = '18' + str(my_y)
+    if int(my_era) == 3 or int(my_era) == 4:
+        my_date_send = '19' + str(my_y)
+    if int(my_era) == 5 or int(my_era) == 6:
+        my_date_send = '20' + str(my_y)
+    if int(my_era) == 7 or int(my_era) == 8:
+        my_date_send = '21' + str(my_y)
+
+    if int(my_date_send)<2013:
+        print('Рожден до 2013 года')
+    else:
+        print('Рожден после 2013 года')
+
     lst1=[1,11,21,151,161,221,271,371,421,471,491,521,571,601,651]
     lst2=[10,19,150,160,220,270,370,420,470,490,520,570,600,650,700]
     lst3=['Больница Курессааре','Наистеклиник Тартуского университета',

@@ -15,7 +15,7 @@ sample4 = '01.01.1970 - 00:00:01'
 #sample1=datetime.datetime.strptime(sample1,'%b %d %Y %I:%M%p')
 
 print(type(datetime.datetime.strptime(sample1,'%b %d %Y %I:%M%p')))
-print(type(datetime.datetime.strptime(sample2,'%H:%M %d/%m/%y')))
+print(type(datetime.datetime.strptime(sample2,'%H:%M %y/%m/%d')))
 print(type(datetime.datetime.strptime(sample3,'%A, %B %d, %Y')))
 print(type(datetime.datetime.strptime(sample4,'%d.%m.%Y - %H:%M:%S')))
 # print(sample1)

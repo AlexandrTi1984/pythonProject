@@ -15,8 +15,6 @@ while True:
         print('Спасибо что пользовались нашим сервисом')
         quit()
     try:
-
-
         int(user_id) # проверка на число
         if len(user_id) !=11:
             raise Exception
