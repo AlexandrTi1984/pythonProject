@@ -2,14 +2,15 @@
 Написать программу которая открывает текстовый файл и считает следующее:
 1. Общее кол-во слов
 2. Кол-во уникальных (разных)
-
 Не влияет на уникальность:
 Заглавные и прописные буквы
 Знаки препинания: ',' '.' '!' '?'
-
 Сохраняет кол-ва в отдельный файл.
 Выписывает все уникальные слова в алфавитном порядке.
 """""""""
+
+import os
+
 
 with open('Example_book.txt', 'r', encoding='UTF8') as file:
     file_content = file.read().lower()    #Все в нижний регистр, т.к строка
@@ -29,6 +30,13 @@ my_string_unikalnie.sort()
 # переводим в str
 my_printstring1=('Количество слов составляет ' + str(len(my_string)) + ' штук')
 my_printstring2=('Количество уникальных слов составляет ' + str(len(my_string_unikalnie)) + ' штук')
+
+#Check if file exists, then delete it:  https://www.w3schools.com/python/python_file_remove.asp
+# if os.path.exists("1-My_txt.txt"):
+#   os.remove("1-My_txt.txt")
+#  # print("The file exist")
+# else:
+#   print("The file does not exist")
 
 with open ('1-My_txt.txt', 'w',encoding='UTF8') as file:
     file.write(str(my_printstring1) + '\n')
