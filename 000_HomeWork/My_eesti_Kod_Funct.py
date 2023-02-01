@@ -81,14 +81,11 @@ def chek_key_1_2 (number,control_number):
     # Если 10 то проверяем на 0.
     # Проверка на ключ
     #print(sum1)
-    if sum1 - (sum1 // 11) * 11 == int(control_number):
-        key1=True
-    if sum1 - (sum1 // 11) * 11 == 10 and int(control_number) == 0:
-        key1=True
-    if sum2 - (sum2 // 11) * 11 == int(control_number):
-        key2=True
-    if sum2 - (sum2 // 11) * 11 == 10 and int(control_number) == 0:
-        key2 = True
+  #  result % 11 == int(user_input[-1]):
+    if sum1 % 11 == int(control_number):
+          key1=True
+    if sum2 % 11 == int(control_number):
+          key2=True
     if key1==True and key2==True:
         return 'Ваш код корректен (проверка прошла по двум проверкам)'
     if key1==True and key2==False:

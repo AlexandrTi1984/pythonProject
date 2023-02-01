@@ -9,3 +9,14 @@ Nam tempor egestas enim sit amet ullamcorper. Nam ut odio vehicula, rhoncus ante
 Vestibulum semper nunc mauris, sit amet mollis sem congue porttitor. Mauris ut porttitor turpis. Proin posuere quis mauris non porta. Nulla posuere dolor urna, ut faucibus dui condimentum in. Nullam quis justo in sapien auctor porta sed nec turpis. Nulla sit amet nulla vel turpis accumsan pharetra. Phasellus non turpis a purus luctus gravida. Mauris pharetra posuere justo id euismod. Fusce facilisis, est ac vehicula ultrices, justo quam fringilla mauris, sed vulputate neque arcu ac massa.
 
 Generated 5 paragraphs, 434 words, 2911 bytes of Lorem Ipsum
+
+Написать программу которая открывает текстовый файл и считает следующее:
+1. Общее кол-во слов
+2. Кол-во уникальных (разных)
+
+Не влияет на уникальность:
+Заглавные и прописные буквы
+Знаки препинания: ',' '.' '!' '?'
+
+Сохраняет кол-ва в отдельный файл.
+Выписывает все уникальные слова в алфавитном порядке.
