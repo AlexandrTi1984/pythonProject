@@ -2,6 +2,7 @@ from My_eesti_Kod_Funct import gender_pol
 from My_eesti_Kod_Funct import my_date_birthday
 from My_eesti_Kod_Funct import bolnica_name
 from My_eesti_Kod_Funct import chek_key_1_2
+from My_eesti_Kod_Funct import my_chek_id
 
 #user_id='38405230460'
 #user_id='48203240071'
@@ -12,6 +13,7 @@ from My_eesti_Kod_Funct import chek_key_1_2
 
 
 user_id = input('Введи ид код для дальнейшей работы ')
+#my_chek_id(user_id)
 while True:
     user_choice = input("Выберите что хотите проверить:\n1.Пол \n2.Дата рождения \n"
                         "3.Регион \n4.Проверка кода \n5.Ввести код\n0.Выход\n--> ")

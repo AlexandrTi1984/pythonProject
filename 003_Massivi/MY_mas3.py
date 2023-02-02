@@ -35,4 +35,14 @@
 #     if cnt==100:
 #         break #остановка
 #     cnt+=1
-#
+indeks=0
+strana = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+nums = [1, 5, 6, 8, 3, 4, 2]
+
+for i in range(3):
+    indeks =int((nums.index(max(nums))))
+
+    print(strana[indeks], nums[indeks])
+    nums.pop(indeks)
+    strana.pop(indeks)
+
