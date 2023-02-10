@@ -44,3 +44,4 @@ with open ('1-My_txt.txt', 'w',encoding='UTF8') as file:
     for i in range(len(my_string_unikalnie)):
         write_string=str(my_string_unikalnie[i])
         file.write(write_string + '\n')
+
