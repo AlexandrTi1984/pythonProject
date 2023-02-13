@@ -45,22 +45,23 @@ text_to_search = '''
 str_formula='2*9+3*5'
 
 #  Number1 #
-pattern = re.compile(r'(#)[0-F]{6}')
+#pattern = re.compile(r'(#)[0-F]{6}')
+pattern = re.compile(r'#[0-9A-F]{6}',re.IGNORECASE)
 matches = pattern.finditer(text_to_search)
 for match in matches:
     print(match)
 
 
 #  Number2 #
-pattern = re.compile(r'[+]?\d+')
+pattern = re.compile(r'[+]\d+')
 matches = pattern.finditer(str_formula)
 for match in matches:
     print(match)
 
 
 #  Number3 #
-pattern = re.compile(r'(([0-1][0-9])|(2[0-3])):[0-5][0-9]')
-#pattern = re.compile(r'[0-2][0-9]:[0-5][0-9]')
+pattern = re.compile(r'\b(([0-1][0-9])|(2[0-3])):[0-5][0-9]\b')
+
 matches = pattern.finditer(text_to_search)
 for match in matches:
     print(match)
@@ -69,30 +70,39 @@ for match in matches:
 with open('people.txt', 'r', encoding='UTF8') as file:
     people_data = file.read()
     # Match
-pattern=re.compile(r'[A-Z][a-z]+\s+[A-Z][a-z]+\s')
-names = pattern.finditer(people_data)
+#pattern=re.compile(r'[A-Z][a-z]+\s+[A-Z][a-z]+\s')
+pattern=re.compile(r'[A-Z][a-z ]+\s+[A-Za-z-]+\n')
+names = pattern.findall(people_data)
 count=0
-for match in names:
-    count+=1
-    print(match)
+# for match in names:
+#     count+=1
+#     print(match)
 
 #pattern2=re.compile(r'\d{3}\s[\w]+\s[A-Z][a-z]., [A-Z][\w\s]+[A-Z]{2}\d{5}')
 pattern2=re.compile(r'(\d{3} ).+\w+')
-adress = pattern2.finditer(people_data)
+adress = pattern2.findall(people_data)
 
-count2=0
-for match2 in adress:
-    count2+=1
-    print(match2)
+# count2=0
+# for match2 in adress:
+#     count2+=1
+#     print(match2)
+#
+# print('Всего ФИО ',count)
+# print('Всего адресов ',count2)
 
-print('Всего ФИО ',count)
-print('Всего адресов ',count2)
-
+people_pairs=list(zip(names,adress))
+people_dict={}
+cnt=0
+for x,y in people_pairs:
+    people_dict[cnt]= {'ФИО':x, 'Адрес':y}
+    cnt+=1
+print(people_dict)
 ##### Number 5#####
 my_str_example1='Aggg**99998888wwwqqqzzz'
 my_str_example2='Aggg99998888wwwqqqzzz'
-my_str_example3='Agg--g999988--88www-qqqzzz'
+my_str_example3='Agg@g99998888wwwqqqzzz'
 
+pattern = re.compile(r'\W')
 pattern = re.compile(r'\W')
 matches = pattern.finditer(my_str_example3)
 
@@ -106,7 +116,7 @@ else:
     print("Строка содержит только A-z и 0-9")
 
 #Number 6 ##
-pattern = re.compile(r'[1-8]\d{2}(([0]\d)|([1][0-3]))(([0-2][\d])|([3][0-1]))[0-8]\d{3}')
+pattern = re.compile(r'[1-8]\d{2}(([0]\d)|([1][0-2]))(([0-2][\d])|([3][01]))[0-8]\d{3}')
 matches = pattern.finditer(text_to_search)
 for match in matches:
     print(match)

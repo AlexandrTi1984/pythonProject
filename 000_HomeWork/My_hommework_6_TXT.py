@@ -32,8 +32,8 @@ my_printstring1=('Количество слов составляет ' + str(len
 my_printstring2=('Количество уникальных слов составляет ' + str(len(my_string_unikalnie)) + ' штук')
 
 #Check if file exists, then delete it:  https://www.w3schools.com/python/python_file_remove.asp
-# if os.path.exists("1-My_txt.txt"):
-#   os.remove("1-My_txt.txt")
+# if os.path.exists("My_txt.txt"):
+#   os.remove("My_txt.txt")
 #  # print("The file exist")
 # else:
 #   print("The file does not exist")
